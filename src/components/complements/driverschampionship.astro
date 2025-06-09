@@ -1,0 +1,257 @@
+---
+const ITEMS_DRIVERS = [
+    {
+        id: "PIA",
+        full_name: "Oscar Piastri",
+        nationality: "AU",
+        number: 31,
+        team_id: "MCL",
+        date_of_birth: "2001-04-06",
+        place_of_birth: "Melbourne",
+        points: 186,
+        position: 1
+    },
+    {
+        id: "NOR",
+        full_name: "Lando Norris",
+        nationality: "GB",
+        number: 4,
+        team_id: "MCL",
+        date_of_birth: "1999-11-13",
+        place_of_birth: "Bristol",
+        points: 176,
+        position: 2
+    },
+    {
+        id: "VER",
+        full_name: "Max Verstappen",
+        nationality: "NL",
+        number: 33,
+        team_id: "RBR",
+        date_of_birth: "1997-09-30",
+        place_of_birth: "Hasselt",
+        points: 137,
+        position: 3
+    },
+    {
+        id: "RUS",
+        full_name: "George Russell",
+        nationality: "GB",
+        number: 63,
+        team_id: "MER",
+        date_of_birth: "1998-02-15",
+        place_of_birth: "King's Lynn",
+        points: 111,
+        position: 4
+    },
+    {
+        id: "LEC",
+        full_name: "Charles Leclerc",
+        nationality: "MC",
+        number: 16,
+        team_id: "FER",
+        date_of_birth: "1997-10-16",
+        place_of_birth: "Monte Carlo",
+        points: 94,
+        position: 5
+    },
+    {
+        id: "HAM",
+        full_name: "Lewis Hamilton",
+        nationality: "GB",
+        number: 44,
+        team_id: "FER",
+        date_of_birth: "1985-01-07",
+        place_of_birth: "Stevenage",
+        points: 71,
+        position: 6
+    },
+    {
+        "id": "KIM",
+        "full_name": "Kimi Antonelli",
+        "nationality": "ITA",
+        "number": 12,
+        "team_id": "MER",
+        "date_of_birth": "2006-08-25",
+        "place_of_birth": "Bolonia",
+        "points": "48",
+        "position": "7"
+    },
+    {
+        "id": "ALB",
+        "full_name": "Alexander Albon",
+        "nationality": "TH",
+        "number": 23,
+        "team_id": "WIL",
+        "date_of_birth": "1996-03-23",
+        "place_of_birth": "London",
+        "points": "42",
+        "position": "8"
+    },
+    {
+        "id": "HAD",
+        "full_name": "Isack Hadjar",
+        "nationality": "FR",
+        "number": 6,
+        "team_id": "RB",
+        "date_of_birth": "2004-09-28",
+        "place_of_birth": "París",
+        "points": "21",
+        "position": "9"
+    },
+    {
+        "id": "OCO",
+        "full_name": "Esteban Ocon",
+        "nationality": "FR",
+        "number": 31,
+        "team_id": "HAAS",
+        "date_of_birth": "1996-09-17",
+        "place_of_birth": "Évreux",
+        "points": "20",
+        "position": "10"
+    },
+    {
+        "id": "HUL",
+        "full_name": "Nico Hülkenberg",
+        "nationality": "DE",
+        "number": 27,
+        "team_id": "SAU",
+        "date_of_birth": "1987-08-19",
+        "place_of_birth": "Emmerich am Rhein",
+        "points": "16",
+        "position": "11"
+    },
+    {
+        "id": "STR",
+        "full_name": "Lance Stroll",
+        "nationality": "CA",
+        "number": 18,
+        "team_id": "AST",
+        "date_of_birth": "1998-10-29",
+        "place_of_birth": "Montreal",
+        "points": "14",
+        "position": "12"
+    }, 
+    {
+        "id": "SAI",
+        "full_name": "Carlos Sainz Jr.",
+        "nationality": "ES",
+        "number": 55,
+        "team_id": "WIL",
+        "date_of_birth": "1994-09-01",
+        "place_of_birth": "Madrid",
+        "points": "12",
+        "position": "13"
+    },
+    {
+        "id": "GAS",
+        "full_name": "Pierre Gasly",
+        "nationality": "FR",
+        "number": 10,
+        "team_id": "ALP",
+        "date_of_birth": "1996-02-07",
+        "place_of_birth": "Rouen",
+        "points": "11",
+        "postion": "14"
+    },
+    {
+        "id": "TSU",
+        "full_name": "Yuki Tsunoda",
+        "nationality": "JP",
+        "number": 22,
+        "team_id": "RBR",
+        "date_of_birth": "2000-05-11",
+        "place_of_birth": "Sagamihara",
+        "points": "10",
+        "position": "15"
+    },
+    {
+        "id": "BEA",
+        "full_name": "Oliver Bearman",
+        "nationality": "GB",
+        "number": 38,
+        "team_id": "HAAS",
+        "date_of_birth": "2005-05-08",
+        "place_of_birth": "Chelmsford",
+        "points": "6",
+        "position": "16"
+    },
+    {
+        "id": "LAW",
+        "full_name": "Liam Lawson",
+        "nationality": "NZ",
+        "number": 36,
+        "team_id": "RB",
+        "date_of_birth": "2002-10-11",
+        "place_of_birth": "Hastings",
+        "points": "4",
+        "postiion": "17"
+    },
+    {
+        "id": "ALO",
+        "full_name": "Fernando Alonso",
+        "nationality": "ES",
+        "number": 14,
+        "team_id": "AST",
+        "date_of_birth": "1981-07-29",
+        "place_of_birth": "Oviedo",
+        "points" : "2",
+        "position": "18"
+    },
+    {
+        "id": "BOR",
+        "full_name": "Gabriel Bortoleto",
+        "nationality": "BRA",
+        "number": 5,
+        "team_id": "SAU",
+        "date_of_birth": "2004-10-14",
+        "place_of_birth": "Sao Paulo",
+        "points" : "0",
+        "position": "19"
+    },
+     {
+        "id": "JAC",
+        "full_name": "Jack Doohan",
+        "nationality": "AU",
+        "number": 7,
+        "team_id": "ALP",
+        "date_of_birth": "2003-01-20",
+        "place_of_birth": "Gold Coast",
+        "points" : "0",
+        "position": "20"
+    },
+     {
+        "id": "COL",
+        "full_name": "Franco Colapinto",
+        "nationality": "AR",
+        "number": 43,
+        "team_id": "ALP",
+        "date_of_birth": "2003-05-27",
+        "place_of_birth": "Pilar",
+        "points" : "0",
+        "position": "21"
+    },
+      
+
+
+]
+
+import Containerposition from "./containerposition.astro"
+---
+<article class="w-full flex flex-wrap ">
+    <ol>
+        {
+            ITEMS_DRIVERS.map((itemDriver)=>{
+                <li>
+                    <Containerposition key={itemDriver.id} itemDriver={itemDriver}>23</Containerposition>
+                    {itemDriver}
+                </li>
+            })
+
+        }
+        <li>
+
+        </li>
+    </ol>
+
+</article>
