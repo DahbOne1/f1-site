@@ -1,10 +1,11 @@
 ---
-const {key, itemDriver} = Astro.props;
+const {key, itemPosition} = Astro.props;
 ---
 
-<div class="flex w-1/2 rounded-l bg-[#3d3d3d] py-1 px-3 text-[#d1d1d1]">
-    <span>{itemDriver.position}</span>
-    <img src={itemDriver.icon} alt="">
-    <p>{itemDriver.name}</p>
-    <span>{itemDriver.points}</span>
+<div class="rounded-lg bg-[#3d3d3d] py-1 px-4 text-[#d1d1d1]  gap-3 text-sm ">
+    <span class="inline-block w-1 font-bold ">{itemPosition.position}</span>
+    <div class="inline-block w-2 bg-black ml-5" > <br> </div>
+    <img class="inline-block w-6 p-1 bg-white rounded-full mx-1 mb-1" src={itemPosition.icon_team} alt="">
+    <p class="inline-block text-left w-32 text-xs "> {itemPosition.full_name}</p>
+    <span class="inline-block ml-2 w-4" >{itemPosition.points}</span>
 </div>

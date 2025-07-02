@@ -1,0 +1,18 @@
+---
+const RACES_CHAMPIONSHIP = new Array(24).fill(null);
+RACES_CHAMPIONSHIP.fill("YES",0,12)
+    
+   
+
+---
+
+<div class="w-10/12 mx-auto flex gap-6 justify-center py-10">
+
+    {
+        RACES_CHAMPIONSHIP.map((race)=>(
+            <div class="rounded-md bg-black w-6 h-6 border-1 border-[#d1d1d1]"></div>
+            
+        ))
+    
+    }
+</div>

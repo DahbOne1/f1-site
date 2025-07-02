@@ -1,7 +1,15 @@
 ---
-
+import Title from "./complements/title.astro"
+import ContainerRaceDate from "./complements/containerRaceDate.astro"
+let nextRace =   {
+        id: "R12",
+        name: "GRAN BRETAÑA",
+        city: "SILVERSTONE CIRCUIT",
+        date: "04-06 JULIO",
+        url_flag: "src/assets/flags/GranBretaña.webp",
+    }
 ---
-<section>
-    <h2>proxima carrera</h2>
-    <article></article>
+<section class="py-10 flex justify-center items-center flex-col gap-8">
+    <Title title="PROXIMA CARRERA" description="" ></Title>
+    <ContainerRaceDate key={nextRace.id} itemRaceDate={nextRace} ></ContainerRaceDate>
 </section>

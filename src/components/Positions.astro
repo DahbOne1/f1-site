@@ -1,18 +1,19 @@
 ---
 import Title from "../components/complements/title.astro"
-import Driverschampionship from "./complements/driverschampionship.astro"
+import Driverschampionship from "../components/complements/driverschampionship.astro"
+import Teamschampionship from "./complements/teamschampionship.astro"
 ---
 
 <section class="py-20 w-full text-[#d1d1d1]">
     <Title title="TABLAS DE POSICIONES" description="Consulta en tiempo real las posiciones de los pilotos y escuderías en el Campeonato Mundial de Fórmula 1"></Title>
-    <article class="w-9/12 mx-auto mt-10 flex">
+    <article class="w-11/12 mx-auto mt-10 flex">
         <div class="w-3/5 font-medium">
-            <h3>MUNDIAL DE PILOTOS</h3>
+            <h3 class="text-center">MUNDIAL DE PILOTOS</h3>
             <Driverschampionship></Driverschampionship>
         </div>
         <div class="w-2/5 font-medium">
-            <h3>MUNDIAL DE CONSTRUCTORES</h3>
-
+            <h3 class="text-center">MUNDIAL DE CONSTRUCTORES</h3>
+            <Teamschampionship></Teamschampionship>
         </div>
     </article>
 </section>
