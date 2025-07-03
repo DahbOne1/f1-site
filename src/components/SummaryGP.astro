@@ -1,15 +1,20 @@
 ---
 import Title from "./complements/title.astro"
+import TopTenTable from "./complements/topTenTable.astro"
+import Podium from "./complements/podium.astro"
 ---
-<section>
+<section class="relative py-20">
+    <span class="absolute top-20 left-10 text-5xl font-bold">Resumen GP</span>
     <Title title="Resumen del Gran Premio de Arabia saudita" description="Momentos, posiciones y emociones de la última carrera"></Title>
-    <article>
-        <div>
-
-        </div>
-        <div>
-            <h3>PODIUM</h3>
-            
-        </div>
+    <article class="w-10/12 mx-auto flex gap-10 justify-center items-start mt-10">
+        <TopTenTable></TopTenTable>
+        <Podium></Podium>
     </article>
 </section>
+<style>
+    span{
+        font-family: "Caveat", cursive;
+        transform: rotate(-14deg);
+        text-shadow: rgba(0, 0, 0, 0.459) 1px 0 10px;
+    }
+</style>

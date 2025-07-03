@@ -2,26 +2,26 @@
 import Title from "./complements/title.astro"
 ---
 
-<section class="py-20">
+<section class="py-20 text-center w-10/12 mx-auto">
     <Title title="APÓYANOS EN LA RECTA FINAL" description="Tu donación nos ayuda a seguir compartiendo la pasión por la F1"></Title>
-    <p>Este proyecto se mantiene gracias a la comunidad <br>
-        Si disfrutas el contenido y quieres ver más herramientas, gráficos y datos exclusivos, <br> considera apoyarnos con una donación</p>
-    <article class="flex justify-center items-center gap-5">
-        <div class="flex flex-col justify-center items-center w-1/4 bg-[#3d3d3d] rounded-xl p-8">
-            <span class="text-7xl py-2 font-bold">5</span>
+    <p class="text-lg block mt-10">Este proyecto se mantiene gracias a la comunidad 
+        Si disfrutas el contenido y quieres ver más herramientas, gráficos y datos exclusivos,  considera apoyarnos con una donación</p>
+    <article class="flex justify-center items-center gap-5 py-10">
+        <div class="flex flex-col justify-center items-center w-1/4 bg-[#3d3d3d] rounded-xl p-6 shadow-[4px_10px_70px_-19px_#de171788] ">
+            <p class="font-bold text-2xl"><span class="text-8xl py-2 font-bold">5</span> MXN</p> 
             <img class="w-48" src="src/assets/circuits/AustraliaCircuit.png" alt="">
-            <button class="bg-red-500 rounded-md py-2 px-6 font-bold">DONAR</button>
+            <button class="bg-red-500 rounded-sm py-1 px-10 font-bold text-sm">DONAR</button>
         </div>
-        <div class="w-1/4 bg-[#d1d1d1] text-[#3d3d3d] rounded-xl">
-            <span>25</span>
-            <img src="src/assets/circuits/BrazilCircuit.png" alt="">
-            <button class="bg-red-500 rounded-md py-2 px-6">DONAR</button>
+        <div class="flex flex-col justify-center items-center w-1/4 bg-[#d1d1d1] text-[#3d3d3d] rounded-xl p-6 shadow-[4px_10px_70px_-10px_#0c1a6cc8]">
+            <p class="font-bold text-2xl"><span class="text-8xl py-2 font-bold">25</span> MXN</p> 
+            <img class="w-56" src="src/assets/circuits/BrazilCircuit.png" alt="">
+            <button class="bg-red-500 rounded-sm py-1 px-10 font-bold text-[#d1d1d1] text-sm">DONAR</button>
         </div>
-        <div class="w-1/4 bg-[#3d3d3d] rounded-xl">
-            <span>15</span>
-            <img src="src/assets/circuits/JapanCircuit.png" alt="">
-            <button class="bg-red-500 rounded-md py-2 px-6">DONAR</button>
+        <div class="flex flex-col justify-center items-center w-1/4 bg-[#3d3d3d] rounded-xl p-6 shadow-[4px_10px_70px_-19px_#de171788]">
+            <p class="font-bold text-2xl"><span class="text-8xl py-2 font-bold">15</span> MXN</p> 
+            <img class="w-52" src="src/assets/circuits/JapanCircuit.png" alt="">
+            <button class="bg-red-500 rounded-sm py-1 px-10 font-bold text-sm">DONAR</button>
         </div>
     </article>
-    <p>Cada aporte, grande o pequeño, nos impulsa a seguir en la pista</p>
+    <p class="text-lg">Cada aporte, grande o pequeño, nos impulsa a seguir en la pista.</p>
 </section>

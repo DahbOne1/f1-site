@@ -1,22 +1,25 @@
 ---
 import Title from "./complements/title.astro"
 ---
-<section class="py-20">
-    <article>
+<section class="py-20  w-10/12 mx-auto flex gap-10">
+    <article class="w-1/2">
         <Title title="Tu Voz en la Pista" desription="Queremos saber qué piensas, envianos tus comentarios y sugerencias"></Title>
-        <form action="">
-            <div>
-                <input type="text">
-                <label for=""></label>
-            </div>
-            <div>
-                <input type="text">
-                <label for=""></label>
-            </div>
-            <button>ENVIAR COMENTARIOS</button>
+        <form class="flex flex-col gap-3 justify-center items-center " action="">
+            <p class="text-center">Queremos saber qué piensas, envianos tus comentarios y sugerencias</p>
+            <label class="w-full" for="">Correo electrónico: <input class="block w-full px-4 rounded-lg border-2 border-red-500/50 mt-1" type="email"></label>
+            <label class="w-full" for="">Comentarios y sugerencias: <textarea class="block w-full px-4 rounded-lg border-2 border-red-500/50 mt-1 max-h-32 min-h-32" ></textarea> </label>
+            <button class="bg-red-500 py-1 px-4 text-sm font-bold rounded-sm">ENVIAR COMENTARIOS</button>
         </form>
     </article>
-    <article class="bg-[url(src/assets/img/BackgroundOne.webp)]">
-        <span>Temporada 2025</span>
+    <article class="w-1/2 bg-[url(src/assets/img/BackgroundForm.webp)] rounded-xl relative bg-cover shadow-[4px_10px_70px_-20px_#171788]">
+        <span class="absolute -bottom-0 -left-6 text-2xl italic font-extrabold">Temporada 2025</span>
     </article>
 </section>
+
+<style>
+    span{
+        font-family: "Caveat", cursive;
+        transform: rotate(-18deg);
+        text-shadow: rgba(0, 0, 0, 0.459) 1px 0 10px;
+    }
+</style>
