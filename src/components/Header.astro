@@ -1,22 +1,91 @@
 ---
 import Logo from "../assets/icons/logo.astro"
-
+import MenuIcon from "./Icons/MenuIcon.astro"
 ---
 
-<header class="fixed w-full z-10" >
+<header class="header-below hidden md:flex fixed w-full z-10 pb-4" >
     <nav class="w-full flex justify-around items-center"> 
         <div class="pt-4">
             <Logo></Logo>
         </div>
         
         <ul class="flex gap-6 font-bold items-center">
-            <li class="bg-[#e10600] rounded-b-sm pt-4"> <a class="px-2" href="">INICIO</a> </li>
-            <li class="pt-4"> <a href="">POSICIONES</a> </li>
-            <li class="pt-4"> <a href="">RENDIMIENTO</a> </li>
-            <li class="pt-4"> <a href="">CALENDARIO</a> </li>
-            <li class="pt-4"> <a href="">ENCUESTAS</a> </li>
-            <li class="pt-4"> <a href="">RESUMEN</a> </li>
+            <li class="bg-[#e10600] rounded-b-sm pt-4"> <a class="px-2" href="#home">INICIO</a> </li>
+            <li class="pt-4"> <a href="#positions">POSICIONES</a> </li>
+           <!--  <li class="pt-4"> <a href="#performance">RENDIMIENTO</a> </li>-->
+            <li class="pt-4"> <a href="#schedule">CALENDARIO</a> </li>
+           <!--  <li class="pt-4"> <a href="#surveys">ENCUESTAS</a> </li>-->
+            <li class="pt-4"> <a href="#summary">RESUMEN</a> </li>
         </ul>
     </nav>
-  
 </header>
+
+<header class="block md:hidden fixed w-full z-10 bg-red-500 py-3 ">
+    <nav class="w-full flex gap-1 justify-around items-start py-2 relative">
+        <div class="pt-4">
+            <Logo></Logo>
+        </div>
+        <div class="pt-2">
+            <input type="checkbox" id="menu">
+            <label for="menu"> <MenuIcon></MenuIcon></label>
+            <ul class="lista absolute w-full left-0 mt-1 font-bold text-center">
+                 <li><a href="#home">INICIO</a> </li>
+                <li><a href="#positions">POSICIONES</a> </li>
+               <!-- <li> <a href="#performance">RENDIMIENTO</a> </li>-->
+                <li> <a href="#schedule">CALENDARIO</a></li>
+               <!-- <li><a href="#surveys">ENCUESTAS</a></li>-->
+                <li><a href="#summary">RESUMEN</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<style>
+    .lista{
+        display: none;
+    }
+
+    input:checked  ~ .lista{
+        display:block;
+    }
+
+    input{
+        display:none;
+    }
+
+
+    .lista li {
+        display: block;
+        background: red;
+        margin: 0;
+        padding: 10px;
+        list-style: none;
+        border-bottom: 1px solid grey;
+        color: #d1d1d1;
+    }
+
+     .header-below{
+        animation: enhance-header ease-in-out both;
+        animation-timeline: scroll(root block);
+        animation-range: 0 200px;
+    }
+
+    @keyframes enhance-header {
+        to{
+            background-color: #cd3a3a82;
+            backdrop-filter: blur(10px);
+        }
+    }
+
+    @keyframes enhance-text {
+        to{
+            color: #0b4b66;
+        }
+    }
+
+    .container-dropdown:hover > .dropdown{
+        display: block;
+    }
+
+
+</style>
